@@ -28,7 +28,7 @@ public class Task {
     @Column(name = "status")
     private Status status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_user")
     private User user;
 }
