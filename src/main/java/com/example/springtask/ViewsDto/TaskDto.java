@@ -14,5 +14,5 @@ public class TaskDto {
 
     private String description;
 
-    List<UserDto> users;
+    UserDto user;
 }
