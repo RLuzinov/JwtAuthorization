@@ -44,7 +44,7 @@ public class SecurityConfiguration {
                     return corsConfiguration;
                 }))
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/auth/sign-up", "/auth/sign-in", "/task/**").permitAll()
+                        .requestMatchers("/auth/sign-up", "/auth/sign-in").permitAll()
                         .requestMatchers("/endpoint", "/admin").hasRole("ADMIN")
                         .anyRequest().authenticated())
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
