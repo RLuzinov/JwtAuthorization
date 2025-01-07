@@ -10,7 +10,6 @@ class SpringtaskApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println(status.STARTED.toString());
 
 	}
 

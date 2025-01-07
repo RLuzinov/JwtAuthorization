@@ -28,7 +28,7 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.ROLE_ADMIN)
                 .build();
-        userService.save(user);
+        userService.create(user);
 
         String jwt = jwtService.generateToken(user);
         return new JwtAuthenticationResponse(jwt);

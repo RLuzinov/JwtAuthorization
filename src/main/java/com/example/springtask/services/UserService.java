@@ -2,7 +2,6 @@ package com.example.springtask.services;
 
 import com.example.springtask.models.User;
 import com.example.springtask.repository.UserRepository;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -39,10 +38,5 @@ public class UserService {
         return this::getByUsername;
     }
 
-    public User getCurrentUser() {
-        // Получение имени пользователя из контекста Spring Security
-        var username = SecurityContextHolder.getContext().getAuthentication().getName();
-        return getByUsername(username);
-    }
 
 }
